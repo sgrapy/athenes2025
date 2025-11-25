@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cartes & Itinéraires – Athènes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <span class="logo-symbol" aria-hidden="true">
+      <svg viewBox="0 0 64 64" class="logo-temple">
+        <polygon points="8,24 32,8 56,24" />
+        <rect x="10" y="24" width="44" height="6" />
+        <rect x="15" y="30" width="4" height="20" />
+        <rect x="25" y="30" width="4" height="20" />
+        <rect x="35" y="30" width="4" height="20" />
+        <rect x="45" y="30" width="4" height="20" />
+        <rect x="10" y="52" width="44" height="4" />
+      </svg>
+    </span>
+    <span class="logo-text">Athènes 19–24 décembre</span>
+  </div>
+
+  <div class="header-controls">
+    <button class="theme-toggle" aria-label="Changer de thème">🌙</button>
+    <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+  </div>
+
+  <nav class="site-nav">
+    <a href="index.html">Accueil</a>
+    <a href="vendredi.html">Vendredi</a>
+    <a href="samedi.html">Samedi</a>
+    <a href="dimanche.html">Dimanche</a>
+    <a href="lundi.html">Lundi</a>
+    <a href="mardi.html">Mardi</a>
+    <a href="mercredi.html">Mercredi</a>
+    <a href="infos.html">Infos utiles</a>
+    <a href="voyage.html">Voyage &amp; Hébergement</a>
+    <a href="dico.html">Mini Dico</a>
+    <a href="carte.html" class="active">Carte</a>
+    <a href="activite.html">Suivi activité</a>
+  </nav>
+</header>
+
+<div class="page-frame">
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero day-hero">
+      <h1>Cartes & itinéraires par jour</h1>
+      <p>
+        Itinéraires principaux pour chaque journée : départ de l’appartement à Pagrati,
+        visites, puis retour. Les liens ouvrent directement Google Maps.
+      </p>
+      <p class="hero-sub">
+        Point de départ : <strong>Pafsaniou 14, Athènes (quartier Pagrati)</strong>.
+      </p>
+    </section>
+
+    <!-- VENDREDI -->
+    <section class="timeline">
+      <h2>📅 Vendredi 19 – Installation & première balade</h2>
+
+      <article class="info-block">
+        <h3>Depuis l’appartement → Jardin National</h3>
+        <p>Balade tranquille pour se mettre dans l’ambiance, sans visiter de gros sites.</p>
+        <ul>
+          <li>Départ : Appartement (Pafsaniou 14).</li>
+          <li>Arrivée : Jardin National d’Athènes.</li>
+        </ul>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Pafsaniou+14+Athens&destination=National+Garden+Athens&travelmode=walking">
+            🗺️ Itinéraire à pied (appart → Jardin National)
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Jardin National → Pláka & Anafiotika</h3>
+        <p>Descente vers le vieux quartier pour flâner, manger une glace ou un gyros.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=National+Garden+Athens&destination=Plaka+Athens&travelmode=walking">
+            🗺️ Jardin National → Pláka
+          </a>
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/search/?api=1&query=Anafiotika+Athens">
+            🔍 Zoom sur Anafiotika
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Pláka / Anafiotika → Areopage (coucher de soleil)</h3>
+        <p>Montée légère vers le rocher de l’Aréopage pour voir l’Acropole au coucher du soleil.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Plaka+Athens&destination=Areopagus+Athens&travelmode=walking">
+            🗺️ Pláka → Aréopage
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Areopage → retour appartement</h3>
+        <p>Retour à Pagrati pour se reposer.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Areopagus+Athens&destination=Pafsaniou+14+Athens&travelmode=walking">
+            🗺️ Aréopage → Appartement (à pied ou taxi)
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <!-- SAMEDI -->
+    <section class="timeline">
+      <h2>📅 Samedi 20 – Acropole & centre historique</h2>
+
+      <article class="info-block">
+        <h3>Appartement → Acropole (entrée sud)</h3>
+        <p>Pour le matin : montée à l’Acropole par l’entrée proche du Théâtre de Dionysos.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Pafsaniou+14+Athens&destination=Acropolis+of+Athens&travelmode=walking">
+            🗺️ Appart → Acropole (à pied / taxi)
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Acropole → Agora romaine</h3>
+        <p>Descente dans le centre historique, côté Tour des Vents.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Acropolis+of+Athens&destination=Roman+Agora,+Athens&travelmode=walking">
+            🗺️ Acropole → Agora romaine
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Agora romaine → Musée de l’Acropole</h3>
+        <p>Traversée de Pláka pour rejoindre le musée moderne.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Roman+Agora,+Athens&destination=Acropolis+Museum&travelmode=walking">
+            🗺️ Agora romaine → Musée de l’Acropole
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Musée de l’Acropole → Appartement</h3>
+        <p>Retour tranquille vers Pagrati.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Acropolis+Museum&destination=Pafsaniou+14+Athens&travelmode=walking">
+            🗺️ Musée → Appartement
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <!-- DIMANCHE -->
+    <section class="timeline">
+      <h2>📅 Dimanche 21 – Stade, Garde & Musée archéologique</h2>
+
+      <article class="info-block">
+        <h3>Appartement → Stade panathénaïque</h3>
+        <p>Départ du matin pour le stade de marbre.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Pafsaniou+14+Athens&destination=Panathenaic+Stadium&travelmode=walking">
+            🗺️ Appart → Stade panathénaïque
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Stade → Place Syntagma (relève de la garde)</h3>
+        <p>Balade à pied ou en bus vers le Parlement grec.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Panathenaic+Stadium&destination=Syntagma+Square,+Athens&travelmode=walking">
+            🗺️ Stade → Syntagma
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Syntagma → Musée archéologique national</h3>
+        <p>Trajet en métro ou à pied (plus long à pied).</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Syntagma+Square,+Athens&destination=National+Archaeological+Museum,+Athens&travelmode=transit">
+            🚇 Syntagma → Musée archéologique (transports)
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Musée archéologique → Lycabette (funiculaire)</h3>
+        <p>Montée au mont Lycabette pour la vue sur toute la ville.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=National+Archaeological+Museum,+Athens&destination=Lycabettus+Funicular&travelmode=walking">
+            🗺️ Musée → Funiculaire du Lycabette
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Lycabette → Appartement</h3>
+        <p>Redescente à pied + taxi / bus ou métro selon la forme de tout le monde.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Lycabettus+Hill,+Athens&destination=Pafsaniou+14+Athens&travelmode=driving">
+            🚕 Lycabette → Appartement (en taxi)
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <!-- LUNDI -->
+    <section class="timeline">
+      <h2>📅 Lundi 22 – Le Pirée & les ports</h2>
+
+      <article class="info-block">
+        <h3>Appartement → Monastiraki</h3>
+        <p>Point de départ pratique pour prendre la ligne verte vers le Pirée.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Pafsaniou+14+Athens&destination=Monastiraki+Square,+Athens&travelmode=transit">
+            🚇 Appart → Monastiraki (transports)
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Monastiraki → Port du Pirée</h3>
+        <p>Ligne 1 (verte) directe jusqu’au Pirée.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Monastiraki+Station,+Athens&destination=Port+of+Piraeus&travelmode=transit">
+            🚇 Monastiraki → Pirée (métro)
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Port du Pirée → Marina Zea & Mikrolimano</h3>
+        <p>Petits déplacements en bus ou à pied selon l’itinéraire.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/search/?api=1&query=Zea+Marina+Piraeus">
+            🔍 Localiser Marina Zea
+          </a>
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/search/?api=1&query=Mikrolimano+Piraeus">
+            🔍 Localiser Mikrolimano
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Retour Pirée → Appartement</h3>
+        <p>Option simple : ligne 1 jusqu’à Monastiraki, puis bus / taxi vers Pagrati.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Port+of+Piraeus&destination=Pafsaniou+14+Athens&travelmode=transit">
+            🚇 Pirée → Appartement (transports)
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <!-- MARDI -->
+    <section class="timeline">
+      <h2>📅 Mardi 23 – Agora antique & colline de Philopappou</h2>
+
+      <article class="info-block">
+        <h3>Appartement → Agora antique</h3>
+        <p>Début de journée plus cool, autour de Thissio / Monastiraki.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Pafsaniou+14+Athens&destination=Ancient+Agora+of+Athens&travelmode=transit">
+            🚇 Appart → Agora antique
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Agora antique → Monastiraki / Psiri</h3>
+        <p>Petite marche pour manger, se balader, faire quelques boutiques.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Ancient+Agora+of+Athens&destination=Monastiraki+Square,+Athens&travelmode=walking">
+            🗺️ Agora antique → Monastiraki
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Monastiraki → Prison de Socrate & Colline de Philopappou</h3>
+        <p>Montée douce pour la fin de journée, avec vue sur l’Acropole au sunset.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Monastiraki+Square,+Athens&destination=Prison+of+Socrates,+Athens&travelmode=walking">
+            🗺️ Monastiraki → Prison de Socrate
+          </a>
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Prison+of+Socrates,+Athens&destination=Philopappos+Monument&travelmode=walking">
+            🗺️ Prison de Socrate → Philopappou
+          </a>
+        </div>
+      </article>
+
+      <article class="info-block">
+        <h3>Philopappou → Appartement</h3>
+        <p>Retour au calme à Pagrati après le coucher de soleil.</p>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Philopappos+Monument&destination=Pafsaniou+14+Athens&travelmode=walking">
+            🗺️ Philopappou → Appartement
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <!-- MERCREDI -->
+    <section class="timeline">
+      <h2>📅 Mercredi 24 – Retour</h2>
+
+      <article class="info-block">
+        <h3>Appartement → Aéroport d’Athènes</h3>
+        <p>Pour le retour : départ tôt pour être à l’aéroport 2 h avant le vol.</p>
+        <ul>
+          <li>Objectif : être à l’aéroport vers <strong>09h20</strong> (vol 11h20).</li>
+          <li>Départ conseillé de l’appartement : <strong>07h50–08h00</strong>.</li>
+        </ul>
+        <div class="link-row">
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Pafsaniou+14+Athens&destination=Athens+International+Airport&travelmode=transit">
+            🚇 Appart → Aéroport (métro ligne 3)
+          </a>
+          <a class="btn-link" target="_blank"
+             href="https://www.google.com/maps/dir/?api=1&origin=Pafsaniou+14+Athens&destination=Athens+International+Airport&travelmode=driving">
+            🚕 Appart → Aéroport (taxi)
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <!-- RESUME -->
+    <section class="summary">
+      <h2>Résumé des trajets</h2>
+      <ul class="summary-list">
+        <li><strong>Point de départ fixe :</strong> Appartement Pagrati (Pafsaniou 14).</li>
+        <li><strong>Vendredi :</strong> Jardin National · Pláka · Aréopage.</li>
+        <li><strong>Samedi :</strong> Acropole · Agora romaine · Musée de l’Acropole.</li>
+        <li><strong>Dimanche :</strong> Stade · Syntagma · Musée archéologique · Lycabette.</li>
+        <li><strong>Lundi :</strong> Monastiraki · Pirée (ports) · retour.</li>
+        <li><strong>Mardi :</strong> Agora antique · Monastiraki/Psiri · Prison de Socrate · Philopappou.</li>
+        <li><strong>Mercredi :</strong> Appartement → Aéroport (métro ou taxi).</li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<button class="scroll-top" aria-label="Revenir en haut">&#8679;</button>
+
+<footer class="site-footer">
+  <p>Cartes &amp; Itinéraires – Athènes 🔱</p>
+</footer>
+
+</body>
+</html>

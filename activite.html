@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Suivi activité – Athènes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <span class="logo-symbol" aria-hidden="true">
+      <svg viewBox="0 0 64 64" class="logo-temple">
+        <polygon points="8,24 32,8 56,24" />
+        <rect x="10" y="24" width="44" height="6" />
+        <rect x="15" y="30" width="4" height="20" />
+        <rect x="25" y="30" width="4" height="20" />
+        <rect x="35" y="30" width="4" height="20" />
+        <rect x="45" y="30" width="4" height="20" />
+        <rect x="10" y="52" width="44" height="4" />
+      </svg>
+    </span>
+    <span class="logo-text">Athènes – Suivi activité</span>
+  </div>
+
+  <div class="header-controls">
+    <button class="theme-toggle" aria-label="Changer de thème">🌙</button>
+    <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+  </div>
+
+  <nav class="site-nav">
+    <a href="index.html">Accueil</a>
+    <a href="vendredi.html">Vendredi</a>
+    <a href="samedi.html">Samedi</a>
+    <a href="dimanche.html">Dimanche</a>
+    <a href="lundi.html">Lundi</a>
+    <a href="mardi.html">Mardi</a>
+    <a href="mercredi.html">Mercredi</a>
+    <a href="infos.html">Infos utiles</a>
+    <a href="voyage.html">Voyage &amp; Hébergement</a>
+    <a href="dico.html">Mini Dico</a>
+    <a href="carte.html">Carte</a>
+    <a href="activite.html" class="active">Suivi activité</a>
+  </nav>
+</header>
+
+<div class="page-frame">
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero day-hero">
+      <h1>Suivi activité &amp; pas</h1>
+      <p>
+        Saisie chaque jour du nombre de pas et de la distance parcourue (données de la montre connectée),
+        avec totals et moyennes. Les infos sont enregistrées dans ce navigateur (localStorage).
+      </p>
+    </section>
+
+    <!-- FORMULAIRE -->
+    <section class="timeline">
+      <h2>➕ Ajouter / modifier une journée</h2>
+
+      <article class="info-block">
+        <form id="activity-form">
+          <div class="input-row">
+            <label for="day">Jour :</label>
+            <select id="day" required>
+              <option value="2025-12-19">Vendredi 19</option>
+              <option value="2025-12-20">Samedi 20</option>
+              <option value="2025-12-21">Dimanche 21</option>
+              <option value="2025-12-22">Lundi 22</option>
+              <option value="2025-12-23">Mardi 23</option>
+              <option value="2025-12-24">Mercredi 24</option>
+            </select>
+          </div>
+
+          <div class="input-row">
+            <label for="steps">Nombre de pas :</label>
+            <input type="number" id="steps" min="0" step="1" placeholder="ex : 14523" required />
+          </div>
+
+          <div class="input-row">
+            <label for="distance">Distance (km) :</label>
+            <input type="number" id="distance" min="0" step="0.01" placeholder="ex : 10.4" required />
+          </div>
+
+          <div class="input-row">
+            <label for="notes">Remarque (facultatif) :</label>
+            <input type="text" id="notes" maxlength="80" placeholder="ex : Beaucoup de montée à Philopappou" />
+          </div>
+
+          <button type="submit" class="btn-link">
+            💾 Enregistrer / mettre à jour la journée
+          </button>
+        </form>
+
+        <p style="margin-top:0.6rem;font-size:0.8rem;color:var(--text-muted);">
+          Les valeurs sont stockées dans le navigateur (localStorage). Tu peux modifier une journée
+          à tout moment : choisis le jour, change les chiffres, et ré-enregistre.
+        </p>
+      </article>
+    </section>
+
+    <!-- TABLEAU -->
+    <section class="timeline">
+      <h2>📊 Récapitulatif des journées</h2>
+
+      <article class="info-block">
+        <table class="stats-table" id="activity-table">
+          <thead>
+            <tr>
+              <th>Jour</th>
+              <th>Date</th>
+              <th>Pas</th>
+              <th>Distance (km)</th>
+              <th>Remarque</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- lignes générées en JS -->
+          </tbody>
+        </table>
+      </article>
+    </section>
+
+    <!-- STATS -->
+    <section class="summary">
+      <h2>Statistiques globales</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Total pas</div>
+          <div class="stat-value" id="total-steps">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Total distance (km)</div>
+          <div class="stat-value" id="total-distance">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Moyenne (km/jour saisi)</div>
+          <div class="stat-value" id="avg-distance">0</div>
+        </div>
+      </div>
+      <p style="margin-top:0.7rem;font-size:0.8rem;color:var(--text-muted);">
+        La moyenne est calculée uniquement sur les jours pour lesquels tu as saisi des valeurs.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<button class="scroll-top" aria-label="Revenir en haut">&#8679;</button>
+
+<footer class="site-footer">
+  <p>Suivi activité – Athènes 🔱</p>
+</footer>
+
+<!-- SCRIPT SPECIFIQUE A LA PAGE -->
+<script>
+(function() {
+  const STORAGE_KEY = "athenes_activity";
+
+  const form = document.getElementById("activity-form");
+  const daySelect = document.getElementById("day");
+  const stepsInput = document.getElementById("steps");
+  const distanceInput = document.getElementById("distance");
+  const notesInput = document.getElementById("notes");
+
+  const tableBody = document.querySelector("#activity-table tbody");
+  const totalStepsEl = document.getElementById("total-steps");
+  const totalDistanceEl = document.getElementById("total-distance");
+  const avgDistanceEl = document.getElementById("avg-distance");
+
+  function loadData() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return {};
+      return JSON.parse(raw) || {};
+    } catch (e) {
+      console.error("Erreur lecture localStorage", e);
+      return {};
+    }
+  }
+
+  function saveData(data) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    } catch (e) {
+      console.error("Erreur écriture localStorage", e);
+    }
+  }
+
+  function formatDayLabel(dateStr) {
+    const map = {
+      "2025-12-19": "Vendredi 19",
+      "2025-12-20": "Samedi 20",
+      "2025-12-21": "Dimanche 21",
+      "2025-12-22": "Lundi 22",
+      "2025-12-23": "Mardi 23",
+      "2025-12-24": "Mercredi 24"
+    };
+    return map[dateStr] || dateStr;
+  }
+
+  function renderTable() {
+    const data = loadData();
+    tableBody.innerHTML = "";
+    let totalSteps = 0;
+    let totalDistance = 0;
+    let countDays = 0;
+
+    const keys = Object.keys(data).sort();
+
+    keys.forEach(dateKey => {
+      const entry = data[dateKey];
+      const tr = document.createElement("tr");
+
+      const labelCell = document.createElement("td");
+      labelCell.textContent = formatDayLabel(dateKey);
+
+      const dateCell = document.createElement("td");
+      dateCell.textContent = dateKey;
+
+      const stepsCell = document.createElement("td");
+      stepsCell.textContent = entry.steps ?? "";
+
+      const distanceCell = document.createElement("td");
+      distanceCell.textContent = entry.distance ?? "";
+
+      const notesCell = document.createElement("td");
+      notesCell.textContent = entry.notes ?? "";
+
+      tr.appendChild(labelCell);
+      tr.appendChild(dateCell);
+      tr.appendChild(stepsCell);
+      tr.appendChild(distanceCell);
+      tr.appendChild(notesCell);
+
+      tableBody.appendChild(tr);
+
+      if (typeof entry.steps === "number") {
+        totalSteps += entry.steps;
+      }
+      if (typeof entry.distance === "number") {
+        totalDistance += entry.distance;
+        countDays += 1;
+      }
+    });
+
+    totalStepsEl.textContent = totalSteps.toLocaleString("fr-FR");
+    totalDistanceEl.textContent = totalDistance.toFixed(2).replace(".", ",");
+    avgDistanceEl.textContent =
+      countDays > 0
+        ? (totalDistance / countDays).toFixed(2).replace(".", ",")
+        : "0";
+  }
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const day = daySelect.value;
+    const steps = parseInt(stepsInput.value, 10);
+    const distance = parseFloat(distanceInput.value.replace(",", "."));
+    const notes = notesInput.value.trim();
+
+    if (!day || isNaN(steps) || isNaN(distance)) {
+      alert("Merci de remplir au moins jour, pas et distance.");
+      return;
+    }
+
+    const data = loadData();
+    data[day] = {
+      steps: steps,
+      distance: distance,
+      notes: notes
+    };
+    saveData(data);
+    renderTable();
+  });
+
+  // Quand on change de jour, si des données existent, on les charge dans le formulaire
+  daySelect.addEventListener("change", function() {
+    const data = loadData();
+    const entry = data[daySelect.value];
+    if (entry) {
+      stepsInput.value = entry.steps ?? "";
+      distanceInput.value = entry.distance ?? "";
+      notesInput.value = entry.notes ?? "";
+    } else {
+      stepsInput.value = "";
+      distanceInput.value = "";
+      notesInput.value = "";
+    }
+  });
+
+  // Init
+  renderTable();
+  daySelect.dispatchEvent(new Event("change"));
+})();
+</script>
+
+</body>
+</html>

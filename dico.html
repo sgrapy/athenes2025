@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Dictionnaire Grec – Athènes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <span class="logo-symbol" aria-hidden="true">
+      <svg viewBox="0 0 64 64" class="logo-temple">
+        <polygon points="8,24 32,8 56,24" />
+        <rect x="10" y="24" width="44" height="6" />
+        <rect x="15" y="30" width="4" height="20" />
+        <rect x="25" y="30" width="4" height="20" />
+        <rect x="35" y="30" width="4" height="20" />
+        <rect x="45" y="30" width="4" height="20" />
+        <rect x="10" y="52" width="44" height="4" />
+      </svg>
+    </span>
+    <span class="logo-text">Athènes – Mini Dico Grec</span>
+  </div>
+
+  <div class="header-controls">
+    <button class="theme-toggle" aria-label="Changer de thème">🌙</button>
+    <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+  </div>
+
+  <nav class="site-nav">
+    <a href="index.html">Accueil</a>
+    <a href="vendredi.html">Vendredi</a>
+    <a href="samedi.html">Samedi</a>
+    <a href="dimanche.html">Dimanche</a>
+    <a href="lundi.html">Lundi</a>
+    <a href="mardi.html">Mardi</a>
+    <a href="mercredi.html">Mercredi</a>
+    <a href="infos.html">Infos utiles</a>
+    <a href="voyage.html">Voyage &amp; Hébergement</a>
+    <a href="dico.html" class="active">Mini Dico</a>
+    <a href="carte.html">Carte</a>
+    <a href="activite.html">Suivi activité</a>
+  </nav>
+</header>
+
+<div class="page-frame">
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero day-hero">
+      <h1>Mini Dictionnaire Grec</h1>
+      <p>
+        Les phrases essentielles pour 5 jours à Athènes : simples, utiles,
+        et faciles à prononcer grâce à la version phonétique.
+      </p>
+    </section>
+
+    <!-- SECTION BASES -->
+    <section class="timeline">
+      <h2>👋 Bases & Politesse</h2>
+
+      <article class="info-block">
+        <table class="dico-table">
+          <tr><th>Français</th><th>Grec</th><th>Phonétique</th></tr>
+          <tr><td>Bonjour</td><td>Γειά σας</td><td>Yia sas</td></tr>
+          <tr><td>Salut</td><td>Γειά σου</td><td>Yia sou</td></tr>
+          <tr><td>Au revoir</td><td>Αντίο</td><td>Adío</td></tr>
+          <tr><td>S’il vous plaît</td><td>Παρακαλώ</td><td>Parakaló</td></tr>
+          <tr><td>Merci</td><td>Ευχαριστώ</td><td>Efkharistó</td></tr>
+          <tr><td>Merci beaucoup</td><td>Ευχαριστώ πολύ</td><td>Efkharistó polí</td></tr>
+          <tr><td>De rien</td><td>Τίποτα</td><td>Típota</td></tr>
+          <tr><td>Excusez-moi</td><td>Συγγνώμη</td><td>Signómi</td></tr>
+          <tr><td>Oui</td><td>Ναι</td><td>Né</td></tr>
+          <tr><td>Non</td><td>Όχι</td><td>Óhi</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <!-- SECTION TRANSPORT -->
+    <section class="timeline">
+      <h2>🧭 Orientation & Transport</h2>
+
+      <article class="info-block">
+        <table class="dico-table">
+          <tr><th>Français</th><th>Grec</th><th>Phonétique</th></tr>
+          <tr><td>Où est… ?</td><td>Πού είναι… ;</td><td>Pou íne… ?</td></tr>
+          <tr><td>Le métro</td><td>Το μετρό</td><td>To métro</td></tr>
+          <tr><td>La station</td><td>Ο σταθμός</td><td>O stathmós</td></tr>
+          <tr><td>Le bus</td><td>Το λεωφορείο</td><td>To léoforio</td></tr>
+          <tr><td>Le centre-ville</td><td>Το κέντρο</td><td>To kéntro</td></tr>
+          <tr><td>À droite</td><td>Δεξιά</td><td>Deksiá</td></tr>
+          <tr><td>À gauche</td><td>Αριστερά</td><td>Aristerá</td></tr>
+          <tr><td>Tout droit</td><td>Ευθεία</td><td>Eftheía</td></tr>
+          <tr><td>Combien de temps ?</td><td>Πόση ώρα ;</td><td>Póssi óra ?</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <!-- SECTION RESTAURANTS -->
+    <section class="timeline">
+      <h2>🍽️ Restaurant & Nourriture</h2>
+
+      <article class="info-block">
+        <table class="dico-table">
+          <tr><th>Français</th><th>Grec</th><th>Phonétique</th></tr>
+          <tr><td>La carte / menu</td><td>Ο κατάλογος</td><td>O katálogos</td></tr>
+          <tr><td>Eau</td><td>Νερό</td><td>Neró</td></tr>
+          <tr><td>Eau sans gaz</td><td>Χωρίς ανθρακικό</td><td>Horís anthrakikó</td></tr>
+          <tr><td>Eau gazeuse</td><td>Σόδα</td><td>Sóda</td></tr>
+          <tr><td>L’addition</td><td>Ο λογαριασμός</td><td>O logariasmos</td></tr>
+          <tr><td>C’était délicieux</td><td>Ήταν νόστιμο</td><td>Ítan nóstimo</td></tr>
+          <tr><td>Est-ce épicé ?</td><td>Είναι καυτερό ;</td><td>Íne kafteró ?</td></tr>
+          <tr><td>Sans viande</td><td>Χωρίς κρέας</td><td>Horís kréas</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <!-- SECTION ACHATS -->
+    <section class="timeline">
+      <h2>🛒 Achats & Marchés</h2>
+
+      <article class="info-block">
+        <table class="dico-table">
+          <tr><th>Français</th><th>Grec</th><th>Phonétique</th></tr>
+          <tr><td>Combien ça coûte ?</td><td>Πόσο κάνει ;</td><td>Póso káni ?</td></tr>
+          <tr><td>C’est trop cher</td><td>Είναι ακριβό</td><td>Íne akrivó</td></tr>
+          <tr><td>Je voudrais…</td><td>Θα ήθελα…</td><td>Tha íthela…</td></tr>
+          <tr><td>Carte bancaire</td><td>Κάρτα</td><td>Kárta</td></tr>
+          <tr><td>Reçu</td><td>Απόδειξη</td><td>Apódixi</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <!-- SECTION URGENCES -->
+    <section class="timeline">
+      <h2>🆘 Urgences & Besoins</h2>
+
+      <article class="info-block">
+        <table class="dico-table">
+          <tr><th>Français</th><th>Grec</th><th>Phonétique</th></tr>
+          <tr><td>Aidez-moi</td><td>Βοήθεια</td><td>Voíthia</td></tr>
+          <tr><td>Appelez la police</td><td>Καλέστε την αστυνομία</td><td>Kaléste tin astinomía</td></tr>
+          <tr><td>Je suis perdu</td><td>Έχω χαθεί</td><td>Ého hathí</td></tr>
+          <tr><td>Où sont les toilettes ?</td><td>Πού είναι η τουαλέτα ;</td><td>Pou íne i toualéta ?</td></tr>
+          <tr><td>Ça va ?</td><td>Είσαι καλά ;</td><td>Íse kalá ?</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <!-- SECTION BONUS -->
+    <section class="timeline">
+      <h2>✨ Bonus – Phrases sympas</h2>
+
+      <article class="info-block">
+        <table class="dico-table">
+          <tr><th>Français</th><th>Grec</th><th>Phonétique</th></tr>
+          <tr><td>Athènes est magnifique !</td><td>Η Αθήνα είναι υπέροχη !</td><td>I Athína íne ipérohi !</td></tr>
+          <tr><td>Nous aimons beaucoup la Grèce</td><td>Μας αρέσει πολύ η Ελλάδα</td><td>Mas arési polí i Eláda</td></tr>
+          <tr><td>Bonne journée</td><td>Καλή μέρα</td><td>Kalí méra</td></tr>
+          <tr><td>Bon appétit</td><td>Καλή όρεξη</td><td>Kalí órexi</td></tr>
+        </table>
+      </article>
+    </section>
+
+  </main>
+</div>
+
+<button class="scroll-top" aria-label="Revenir en haut">&#8679;</button>
+
+<footer class="site-footer">
+  <p>Mini Dictionnaire Grec – Athènes 🔱</p>
+</footer>
+
+</body>
+</html>

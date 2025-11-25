@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Athènes – Feuille de route</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="logo">
+    <span class="logo-symbol" aria-hidden="true">
+      <svg viewBox="0 0 64 64" class="logo-temple">
+        <!-- toit -->
+        <polygon points="8,24 32,8 56,24" />
+        <!-- entablement -->
+        <rect x="10" y="24" width="44" height="6" />
+        <!-- colonnes -->
+        <rect x="15" y="30" width="4" height="20" />
+        <rect x="25" y="30" width="4" height="20" />
+        <rect x="35" y="30" width="4" height="20" />
+        <rect x="45" y="30" width="4" height="20" />
+        <!-- base -->
+        <rect x="10" y="52" width="44" height="4" />
+      </svg>
+    </span>
+    <span class="logo-text">Athènes 19–24 décembre</span>
+  </div>
+
+  <div class="header-controls">
+    <button class="theme-toggle" aria-label="Changer de thème">
+      🌙
+    </button>
+    <button class="nav-toggle" aria-label="Ouvrir le menu">
+      ☰
+    </button>
+  </div>
+
+  <nav class="site-nav">
+    <a href="index.html"class="active">Accueil</a>
+    <a href="vendredi.html">Vendredi</a>
+    <a href="samedi.html">Samedi</a>
+    <a href="dimanche.html">Dimanche</a>
+    <a href="lundi.html">Lundi</a>
+    <a href="mardi.html">Mardi</a>
+    <a href="mercredi.html">Mercredi</a>
+    <a href="infos.html" >Infos utiles</a>
+    <a href="voyage.html">Voyage &amp; Hébergement</a>
+    <a href="dico.html" >Mini Dico</a>
+    <a href="carte.html">Carte</a>
+    <a href="activite.html">Suivi activité</a>
+  </nav>
+</header>
+
+
+<div class="page-frame">
+  <main class="container">
+    <section class="hero">
+      <h1>Feuille de route Athènes</h1>
+      <p>
+        Votre carnet de bord complet pour le voyage à Athènes :
+        programme jour par jour, anecdotes, liens Wikipédia &amp; Google Maps,
+        restos recommandés et horaires des golden hours.
+      </p>
+      <p class="hero-sub">
+        <strong>Période :</strong> 19–24 décembre &nbsp;|&nbsp;
+        <strong>Profil :</strong> famille + grands-parents marcheurs
+      </p>
+    </section>
+
+    <!-- GOLDEN HOURS -->
+    <section class="timeline">
+      <h2>Golden Hours du séjour</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.4rem;">
+        Approximations pour Athènes en décembre (heure locale). Parfait pour
+        décider où être au lever / coucher du soleil.
+      </p>
+      <table class="golden-table">
+        <thead>
+          <tr>
+            <th>Jour</th>
+            <th>Matin</th>
+            <th>Soir</th>
+            <th>Spot prévu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vendredi 19</td>
+            <td>07h30 – 08h10</td>
+            <td>16h20 – 17h05</td>
+            <td>Areopagus (coucher) / Jardin National (lumière douce)</td>
+          </tr>
+          <tr>
+            <td>Samedi 20</td>
+            <td>07h31 – 08h11</td>
+            <td>16h21 – 17h05</td>
+            <td>Rooftop ou Areopagus face à l’Acropole</td>
+          </tr>
+          <tr>
+            <td>Dimanche 21</td>
+            <td>07h32 – 08h12</td>
+            <td>16h22 – 17h06</td>
+            <td>Mont Lycabette (vue 360° après la Garde &amp; le musée)</td>
+          </tr>
+          <tr>
+            <td>Lundi 22</td>
+            <td>07h32 – 08h13</td>
+            <td>16h23 – 17h06</td>
+            <td>Le Pirée – ports &amp; marinas (lumière sur la mer)</td>
+          </tr>
+          <tr>
+            <td>Mardi 23</td>
+            <td>07h33 – 08h13</td>
+            <td>16h23 – 17h06</td>
+            <td>Philopappou (coucher de soleil sur l’Acropole)</td>
+          </tr>
+          <tr>
+            <td>Mercredi 24</td>
+            <td>07h33 – 08h14</td>
+            <td>16h24 – 17h07</td>
+            <td>Jour de départ – pas de sunset prévu</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CARTES JOUR PAR JOUR -->
+    <section class="day-grid">
+      <article class="day-card">
+        <h2>Vendredi 19</h2>
+        <p>Arrivée, Pangrati, Jardin National, Pláka, Anafiotika, coucher de soleil à l'Aréopage.</p>
+        <button onclick="location.href='vendredi.html'">Voir le programme</button>
+      </article>
+
+      <article class="day-card">
+        <h2>Samedi 20</h2>
+        <p>Journée Acropole, Agora romaine, Musée de l’Acropole, golden hour vue sur le Parthénon.</p>
+        <button onclick="location.href='samedi.html'">Voir le programme</button>
+      </article>
+
+      <article class="day-card">
+        <h2>Dimanche 21</h2>
+        <p>Stade panathénaïque, grande relève de la Garde à 11h, Musée archéo national, sunset au Lycabette.</p>
+        <button onclick="location.href='dimanche.html'">Voir le programme</button>
+      </article>
+
+      <article class="day-card">
+        <h2>Lundi 22</h2>
+        <p>Le Pirée : grand port, marina Zea, Mikrolimano, poissons &amp; fruits de mer, golden hour sur la mer.</p>
+        <button onclick="location.href='lundi.html'">Voir le programme</button>
+      </article>
+
+      <article class="day-card">
+        <h2>Mardi 23</h2>
+        <p>Agora antique, Temple d’Héphaïstos, Monastiraki, Psiri, Prison de Socrate, sunset Philopappou.</p>
+        <button onclick="location.href='mardi.html'">Voir le programme</button>
+      </article>
+
+      <article class="day-card">
+        <h2>Mercredi 24</h2>
+        <p>Ménage, check-out, trajet vers l’aéroport – journée logistique tranquille.</p>
+        <button onclick="location.href='mercredi.html'">Voir le programme</button>
+      </article>
+    </section>
+    <section class="timeline">
+        <h2>🧭 Comment utiliser ce site</h2>
+      
+        <article class="info-block">
+          <h3>Structure du site</h3>
+          <ul>
+            <li><strong>Voyage & Hébergement</strong> : vols, parking, trajets Dijon ⇄ Lyon, infos sur l’appartement.</li>
+            <li><strong>Infos utiles</strong> : métro, billets, urgences, météo, argent, conseils pratiques.</li>
+            <li><strong>Carte</strong> : itinéraires par jour avec liens directs Google Maps.</li>
+            <li><strong>Mini Dico</strong> : phrases grecques essentielles avec prononciation.</li>
+            <li><strong>Pages des jours</strong> (vendredi → mercredi) : programme détaillé, visites, anecdotes.</li>
+            <li><strong>Suivi activité</strong> : nombre de pas & distance parcourue chaque jour.</li>
+          </ul>
+        </article>
+      
+        <article class="info-block">
+          <h3>Pour la famille</h3>
+          <ul>
+            <li>Chacun peut ouvrir le site sur son téléphone et l’ajouter en favori.</li>
+            <li>En cas de doute : aller dans <strong>Carte</strong> pour l’itinéraire, ou <strong>Voyage</strong> pour les vols.</li>
+            <li>Les golden hours & les horaires sont dans <strong>Infos utiles</strong>.</li>
+          </ul>
+        </article>
+      </section>
+      
+  </main>
+</div>
+
+  <button class="scroll-top" aria-label="Revenir en haut">&#8679;</button>
+
+  <footer class="site-footer">
+    <p>Feuille de route Athènes – Famille &amp; Mythologie 🔱</p>
+  </footer>
+</body>
+</html>
