@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Infos importantes – Athènes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+<link rel="icon" type="image/x-icon" href="images/athene.ico">
+<link rel="apple-touch-icon" href="images/athene-192.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#070b14">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <span class="logo-symbol" aria-hidden="true">
+      <svg viewBox="0 0 64 64" class="logo-temple">
+        <polygon points="8,24 32,8 56,24" />
+        <rect x="10" y="24" width="44" height="6" />
+        <rect x="15" y="30" width="4" height="20" />
+        <rect x="25" y="30" width="4" height="20" />
+        <rect x="35" y="30" width="4" height="20" />
+        <rect x="45" y="30" width="4" height="20" />
+        <rect x="10" y="52" width="44" height="4" />
+      </svg>
+    </span>
+    <span class="logo-text">Athènes 19–24 décembre</span>
+  </div>
+
+  <div class="header-controls">
+    <button class="theme-toggle" aria-label="Changer de thème">🌙</button>
+    <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+  </div>
+
+  <nav class="site-nav">
+    <a href="index.html">Accueil</a>
+    <a href="vendredi.html">Vendredi</a>
+    <a href="samedi.html">Samedi</a>
+    <a href="dimanche.html">Dimanche</a>
+    <a href="lundi.html">Lundi</a>
+    <a href="mardi.html">Mardi</a>
+    <a href="mercredi.html">Mercredi</a>
+    <a href="infos.html">Infos utiles</a>
+    <a href="voyage.html">Voyage &amp; Hébergement</a>
+    <a href="dico.html">Mini Dico</a>
+    <a href="carte.html">Carte</a>
+    <a href="activite.html">Suivi activité</a>
+    <a href="important.html" class="active">Important</a>
+  </nav>
+</header>
+
+<div class="page-frame">
+  <main class="container">
+
+    <section class="hero day-hero">
+      <h1>Infos importantes & coffre-fort</h1>
+      <p>
+        Ici tu peux stocker tout ce qui est important pour le voyage :
+        <strong>QR code du parking</strong>, <strong>codes</strong>,
+        <strong>mots de passe</strong>, <strong>notes</strong>, <strong>photos</strong>…
+      </p>
+      <p class="hero-sub">
+        Tout est enregistré <strong>localement</strong> dans le navigateur de ton appareil
+        (localStorage) – rien n’est envoyé sur un serveur.
+      </p>
+    </section>
+
+    <!-- COFFRE-FORT PERSO -->
+    <section class="timeline">
+      <h2>💼 Coffre-fort perso</h2>
+
+      <article class="info-block">
+        <h3>Ajouter un élément</h3>
+
+        <div class="input-row">
+          <label for="item-type">Type d’élément</label>
+          <select id="item-type">
+            <option value="text">Texte / note</option>
+            <option value="code">Code / mot de passe</option>
+            <option value="image">Image / photo / QR code</option>
+          </select>
+        </div>
+
+        <div class="input-row">
+          <label for="item-title">Titre (obligatoire)</label>
+          <input id="item-title" type="text" placeholder="Ex : QR Parking P5, Code Airbnb, Wi-Fi…">
+        </div>
+
+        <div class="input-row" id="item-text-row">
+          <label for="item-text">Contenu</label>
+          <textarea id="item-text" rows="3"
+            placeholder="Ex : 5829# puis tourner à gauche, mot de passe, note importante…"></textarea>
+        </div>
+
+        <div class="input-row" id="item-image-row" style="display:none">
+          <label for="item-image">Image (QR code, photo, capture d’écran)</label>
+          <input id="item-image" type="file" accept="image/*">
+        </div>
+
+        <button type="button" class="btn-link" id="item-add">
+          ➕ Ajouter cet élément
+        </button>
+
+        <p class="small-note">
+          Astuce : pour le <strong>QR code du parking P5</strong>, fais une capture d’écran
+          de l’e-mail puis ajoute-le ici en choisissant le type <em>Image</em>.
+        </p>
+      </article>
+
+      <article class="info-block">
+        <h3>Mes éléments enregistrés</h3>
+        <p class="small-note">
+          Tu peux enregistrer autant d’éléments que tu veux. Chaque carte peut être
+          supprimée avec le bouton <strong>Retirer</strong>. Les codes peuvent être
+          affichés / masqués.
+        </p>
+
+        <div id="items-list" class="items-list">
+          <!-- Les cartes seront injectées ici par le script -->
+        </div>
+
+        <button type="button" class="btn-link btn-link-secondary btn-xs" id="items-clear-all">
+          🧹 Tout effacer (coffre-fort)
+        </button>
+      </article>
+    </section>
+
+    <section class="summary">
+      <h2>Résumé de cette page</h2>
+      <ul class="summary-list">
+        <li>📷 Sauvegarde des <strong>images</strong> (ex : QR code parking, photos utiles).</li>
+        <li>🔐 Stockage des <strong>codes</strong> et <strong>mots de passe</strong> avec affichage masqué/visible.</li>
+        <li>📝 Notes libres pour tout ce que tu ne veux pas oublier.</li>
+        <li>💾 Tout est conservé <strong>localement</strong> sur ton téléphone / navigateur.</li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<button class="scroll-top" aria-label="Revenir en haut">&#8679;</button>
+
+<footer class="site-footer">
+  <p>Infos importantes – Athènes 🔱</p>
+</footer>
+
+<!-- SCRIPT SPÉCIFIQUE À CETTE PAGE -->
+<script>
+(function () {
+  const STORAGE_KEY = "athenes-important-items-v1";
+
+  const typeSelect = document.getElementById("item-type");
+  const titleInput = document.getElementById("item-title");
+  const textRow   = document.getElementById("item-text-row");
+  const textArea  = document.getElementById("item-text");
+  const imageRow  = document.getElementById("item-image-row");
+  const imageInput = document.getElementById("item-image");
+  const addBtn    = document.getElementById("item-add");
+  const listEl    = document.getElementById("items-list");
+  const clearAllBtn = document.getElementById("items-clear-all");
+
+  if (!listEl) return;
+
+  let items = [];
+
+  function escapeHtml(str = "") {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;"
+      }[c] || c;
+    });
+  }
+
+  function escapeAttr(str = "") {
+    return String(str).replace(/"/g, "&quot;");
+  }
+
+  function nl2br(str = "") {
+    return escapeHtml(str).replace(/\n/g, "<br>");
+  }
+
+  function loadItems() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) {
+        items = [];
+      } else {
+        items = JSON.parse(raw) || [];
+      }
+    } catch (e) {
+      items = [];
+    }
+    renderItems();
+  }
+
+  function saveItems() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+  }
+
+  function renderItems() {
+    if (!items.length) {
+      listEl.innerHTML = "<p class='small-note'>Aucun élément pour l’instant. Ajoute ton premier QR code, code ou note 👍</p>";
+      return;
+    }
+
+    const html = items.map((item) => {
+      let contentHtml = "";
+
+      if (item.type === "image") {
+        contentHtml = `
+          <div class="item-image-wrapper">
+            <img src="${item.content}" alt="${escapeAttr(item.title)}" class="item-image">
+          </div>
+        `;
+      } else if (item.type === "code") {
+        contentHtml = `
+          <div class="item-code">
+            <span class="item-code-value item-code-hidden"
+                  data-full-value="${escapeAttr(item.content)}"
+                  data-visible="false">••••••••</span>
+            <button type="button"
+                    class="btn-link btn-link-secondary btn-xs"
+                    data-action="toggle-visibility">
+              Afficher
+            </button>
+          </div>
+        `;
+      } else {
+        contentHtml = `<p class="item-text">${nl2br(item.content)}</p>`;
+      }
+
+      const typeLabel = item.type === "image"
+        ? "Image"
+        : item.type === "code"
+          ? "Code / MDP"
+          : "Texte / note";
+
+      return `
+        <div class="item-card" data-id="${item.id}">
+          <div class="item-header">
+            <div>
+              <div class="item-title">${escapeHtml(item.title)}</div>
+              <div class="item-type-pill">${typeLabel}</div>
+            </div>
+          </div>
+          <div class="item-body">
+            ${contentHtml}
+          </div>
+          <div class="item-actions">
+            <button type="button"
+                    class="btn-link btn-link-secondary btn-xs"
+                    data-action="remove">
+              Retirer
+            </button>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    listEl.innerHTML = html;
+  }
+
+  // Gestion du changement de type (texte ↔ image)
+  typeSelect.addEventListener("change", () => {
+    const type = typeSelect.value;
+    if (type === "image") {
+      imageRow.style.display = "";
+      textRow.style.display = "none";
+    } else {
+      imageRow.style.display = "none";
+      textRow.style.display = "";
+    }
+  });
+
+  // Ajouter un élément
+  addBtn.addEventListener("click", () => {
+    const type = typeSelect.value;
+    const title = titleInput.value.trim();
+
+    if (!title) {
+      alert("Ajoute au moins un titre pour retrouver ton élément 😉");
+      return;
+    }
+
+    if (type === "image") {
+      const file = imageInput.files[0];
+      if (!file) {
+        alert("Choisis une image (QR code, photo…) avant d’ajouter.");
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const dataUrl = e.target.result;
+        const item = {
+          id: Date.now(),
+          type,
+          title,
+          content: dataUrl
+        };
+        items.push(item);
+        saveItems();
+        renderItems();
+        // reset du formulaire
+        imageInput.value = "";
+        titleInput.value = "";
+      };
+      reader.readAsDataURL(file);
+    } else {
+      const content = textArea.value.trim();
+      if (!content) {
+        alert("Ajoute un contenu (texte ou code) avant d’ajouter.");
+        return;
+      }
+      const item = {
+        id: Date.now(),
+        type,
+        title,
+        content
+      };
+      items.push(item);
+      saveItems();
+      renderItems();
+      // reset du formulaire
+      textArea.value = "";
+      titleInput.value = "";
+    }
+  });
+
+  // Gestion des boutons Retirer / Afficher / Masquer (délégation d’événements)
+  listEl.addEventListener("click", (e) => {
+    const action = e.target.dataset.action;
+    if (!action) return;
+
+    const card = e.target.closest(".item-card");
+    if (!card) return;
+    const id = card.dataset.id;
+
+    if (action === "remove") {
+      items = items.filter((it) => String(it.id) !== String(id));
+      saveItems();
+      renderItems();
+    }
+
+    if (action === "toggle-visibility") {
+      const span = card.querySelector(".item-code-value");
+      if (!span) return;
+      const visible = span.dataset.visible === "true";
+      if (visible) {
+        span.textContent = "••••••••";
+        span.dataset.visible = "false";
+        e.target.textContent = "Afficher";
+      } else {
+        span.textContent = span.dataset.fullValue || "";
+        span.dataset.visible = "true";
+        e.target.textContent = "Masquer";
+      }
+    }
+  });
+
+  // Effacer tout le coffre-fort
+  clearAllBtn.addEventListener("click", () => {
+    if (!items.length) return;
+    if (!confirm("Effacer tous les éléments enregistrés ?")) return;
+    items = [];
+    saveItems();
+    renderItems();
+  });
+
+  // Chargement initial
+  loadItems();
+})();
+</script>
+
+</body>
+</html>
