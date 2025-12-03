@@ -1,29 +1,40 @@
 {
   "name": "Athènes 19–24 décembre",
-  "short_name": "Athènes 2025",
-  "description": "Programme complet du voyage à Athènes : visites, cartes, infos utiles et hébergement.",
+  "short_name": "Athènes",
+  "description": "Planning, infos, cartes, hébergement et activités du séjour à Athènes.",
+  
   "start_url": "index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
+
+  "theme_color": "#0d1220",
   "background_color": "#070b14",
-  "theme_color": "#070b14",
+
   "icons": [
     {
-      "src": "images/athene-192.png",
+      "src": "athene-192.png",
       "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "images/athene-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "images/athene.png",
-      "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "athene-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "athene-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "athene-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
