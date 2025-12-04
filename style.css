@@ -936,3 +936,135 @@ body::before {
 :root[data-theme="light"] .qr-preview {
   background: rgba(255, 255, 255, 0.9);
 }
+
+/* ===== Coffre-fort : liste & cartes ===== */
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+/* carte d'un élément important */
+.item-card {
+  background: var(--bg-panel-soft);
+  border-radius: 14px;
+  padding: 0.75rem 0.8rem;
+  border: 1px solid var(--border-marble);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.6);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+}
+
+.item-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.item-type-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  background: rgba(63, 125, 208, 0.14);
+  color: var(--accent-blue-soft);
+}
+
+.item-body {
+  margin-bottom: 0.4rem;
+}
+
+.item-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.item-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* bouton plus discret pour "Retirer" / "Tout effacer" */
+.btn-link-secondary {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: var(--text-muted);
+  box-shadow: none;
+}
+
+.btn-link-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+.btn-xs {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+}
+
+/* texte d'aide */
+.small-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+}
+
+/* ===== Image dans la carte (miniature responsive) ===== */
+
+.item-image-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.item-image {
+  max-width: 180px;    /* taille raisonnable sur mobile */
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  cursor: zoom-in;
+}
+
+/* sur les écrans plus grands on peut autoriser un peu plus large */
+@media (min-width: 768px) {
+  .item-image {
+    max-width: 220px;
+  }
+}
+
+/* ===== Lightbox plein écran pour zoomer l'image ===== */
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.image-lightbox.open {
+  display: flex;
+}
+
+.image-lightbox-inner {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.image-lightbox-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+  cursor: zoom-out;
+}

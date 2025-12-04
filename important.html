@@ -150,6 +150,8 @@
   <p>Infos importantes – Athènes 🔱</p>
 </footer>
 
+
+
 <!-- SCRIPT SPÉCIFIQUE À CETTE PAGE -->
 <script>
 (function () {
@@ -164,6 +166,9 @@
   const addBtn    = document.getElementById("item-add");
   const listEl    = document.getElementById("items-list");
   const clearAllBtn = document.getElementById("items-clear-all");
+    const lightbox = document.getElementById("image-lightbox");
+  const lightboxImg = document.getElementById("image-lightbox-img");
+
 
   if (!listEl) return;
 
@@ -336,7 +341,15 @@
   });
 
   // Gestion des boutons Retirer / Afficher / Masquer (délégation d’événements)
-  listEl.addEventListener("click", (e) => {
+    listEl.addEventListener("click", (e) => {
+    // 1) Clic sur une image => ouvrir la lightbox
+    if (e.target.classList.contains("item-image") && lightbox && lightboxImg) {
+      lightboxImg.src = e.target.src;
+      lightbox.classList.add("open");
+      return;
+    }
+
+    // 2) Clic sur les boutons (Retirer / Afficher / Masquer)
     const action = e.target.dataset.action;
     if (!action) return;
 
@@ -366,6 +379,17 @@
     }
   });
 
+  if (lightbox) {
+    lightbox.addEventListener("click", (e) => {
+      // on ferme si on clique sur le fond noir ou sur l'image
+      if (e.target === lightbox || e.target === lightboxImg) {
+        lightbox.classList.remove("open");
+        lightboxImg.src = "";
+      }
+    });
+  }
+
+
   // Effacer tout le coffre-fort
   clearAllBtn.addEventListener("click", () => {
     if (!items.length) return;
@@ -379,6 +403,11 @@
   loadItems();
 })();
 </script>
+<div id="image-lightbox" class="image-lightbox" aria-hidden="true">
+  <div class="image-lightbox-inner">
+    <img id="image-lightbox-img" src="" alt="Agrandissement" />
+  </div>
+</div>
 
 </body>
 </html>
